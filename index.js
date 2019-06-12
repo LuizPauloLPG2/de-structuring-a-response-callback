@@ -1,14 +1,14 @@
-$.get({
-    url: 'https://api.github.com/users/LuizPauloLPG2/repos',
-}).done((req, res, callback) => {
+axios({
+        method: 'get',
+        url: 'https://api.github.com/users/LuizPauloLPG2/repos',
+    })
+    .then((callback) => {
+        const { data: dados, status, statusText: msg } = callback;
+        console.log(dados);
+        console.log(status);
+        console.log(msg);
 
-    const { responseJSON: dados, status, statusText: msg } = callback;
-
-    for (var i = 0; i < req.length; i++) {
-        console.log(req[i].name);
-    }
-
-    console.log(dados);
-    console.log(status);
-    console.log(msg);
+        for (var i = 0; i < dados.length; i++) {
+            console.log(dados[i].name);
+        }
 });
