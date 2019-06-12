@@ -1,0 +1,1 @@
+# de-structuring-a-response-callback
