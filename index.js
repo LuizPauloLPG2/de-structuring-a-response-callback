@@ -2,7 +2,7 @@ getProfileOnGithub = async () => {
         
         try{
          
-                const response = await api.get('https://api.github.com/users/LuizPauloLPG2/repos');
+                const response = await api.get('https://api.github.com/users/luizpaulogroup/repos');
 
                 const { data: dados, status, statusText: msg } = response;
                 
